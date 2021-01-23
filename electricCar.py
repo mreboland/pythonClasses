@@ -296,6 +296,13 @@ admin.showPrivileges()
 # as an attribute in the Admin class. Create a new instance of Admin and use your
 # method to show its privileges.
 
+
+# See newUser.py and users.py (module)
+# 9-11. Imported Admin: Start with your work from Exercise 9-8 (page 173).
+# Store the classes User, Privileges, and Admin in one module. Create a separate
+# file, make an Admin instance, and call show_privileges() to show that
+# everything is working correctly.
+
 class User:
     def __init__(self, firstName, lastName, age, nationality):
         """Creating a user"""

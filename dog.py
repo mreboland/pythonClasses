@@ -82,25 +82,38 @@ yourDog.sit()
 # Make an instance called restaurant from your class. Print the two attributes
 # individually, and then call both methods.
 
-class Restaurant:
-    def __init__(self, restaurantName, cuisineType):
-        """Init attr for restaurant name and cuisine"""
-        self.restaurantName = restaurantName
-        self.cuisineType = cuisineType
-        
-    def describeRestaurant(self):
-        """Describing the restaurant"""
-        print(f"The restaurant is called {self.restaurantName} and it serves {self.cuisineType.title()}.")
 
-    def openRestaurant(self):
-        """Simulating opening of restaurant"""
-        print(f"{self.restaurantName.title()} is now open!")
+
+# The below class was moved to restaurant.py for:
+# 9-10. Imported Restaurant: Using your latest Restaurant class, store it in a module.
+# Make a separate file that imports Restaurant. Make a Restaurant instance,
+# and call one of Restaurant’s methods to show that the import statement is working
+# properly.
+
+# This import should be at the top of the file, but for sake of simplicity and keeping it near code
+from restaurant import Restaurant
+
+# class Restaurant:
+#     def __init__(self, restaurantName, cuisineType):
+#         """Init attr for restaurant name and cuisine"""
+#         self.restaurantName = restaurantName
+#         self.cuisineType = cuisineType
         
+#     def describeRestaurant(self):
+#         """Describing the restaurant"""
+#         print(f"The restaurant is called {self.restaurantName} and it serves {self.cuisineType.title()}.")
+
+#     def openRestaurant(self):
+#         """Simulating opening of restaurant"""
+#         print(f"{self.restaurantName.title()} is now open!")
+
+print("\nThis works")
 restaurant = Restaurant("Japango", "Sushi")
 print(restaurant.restaurantName)
 print(restaurant.cuisineType)
 restaurant.describeRestaurant()
 restaurant.openRestaurant()
+print("The above works\n")
 
 # 9-2. Three Restaurants: Start with your class from Exercise 9-1. Create three
 # different instances from the class, and call describe_restaurant() for each
