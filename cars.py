@@ -40,6 +40,31 @@ class Car:
             print("You can't have negative miles...")
 
 # Adding the below for myElectricCar.py (storing multiple classes)
+class Battery:
+    """A simple attempt to model a battery for an electric car."""
+
+    def __init__(self, batterySize=75):
+        """Init the battery's attributes."""
+        self.batterySize = batterySize
+
+    def describeBattery(self):
+        """Print a statement describing the battery size."""
+        print(f"This car has a {self.batterySize}-kWh battery.")
+
+    def getRange(self):
+        """Print a statement about the range this battery provides."""
+        if self.batterySize == 75:
+            range = 260
+        elif self.batterySize == 100:
+            range = 315
+
+        print(f"This car can go about {range} miles on a full charge.")
+
+    def upgradeBattery(self):
+        if self.batterySize == 75:
+            self.batterySize = 100
+        else:
+            print("Your battery is already the max size offered.")
 class ElectricCar(Car):
 
     """Models aspects of a car, specific to electric vehicles."""
